@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.button{
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid $brand-color;
+  color: white;
+  border-radius: 5px;
+}
+
+//from vaginismus
+//%button {
+//  text-decoration: none;
+//  padding: 0.25rem 1rem;
+//  border-radius: 3px;
+//  &:hover{
+//  opacity: 0.7;
+//  transition: all 0.3s ease-in-out;
+//  }
+//}
+//
+//.white-btn {
+//  @extend %button;
+//  @include button-theme($white);
+//}
+//
+//.dark-btn {
+//  @extend %button;
+//  @include button-theme($dark-gray-text);
+//}

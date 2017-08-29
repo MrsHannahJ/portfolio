@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+header{
+  background: none;
+  .container{
+    padding: 0;
+    padding-top: 1rem;
+    @include respond-to(md){
+      display: flex;
+      padding-top: 0;
+    }
+  }
+  .logo{
+    line-height: 1;
+  }
+  
+  .logo img{
+    display: block;
+    margin: auto;
+    width: 75px;
+    @include respond-to(md){
+      vertical-align: middle;
+    }
+  }
+  
+  ul{
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+    @include respond-to(md){
+      text-align: right;
+    }
+  }
+  li{
+    display: inline;
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $white;
+      transition: color .4s ease;
+      @include respond-to(xs){
+        letter-spacing: 1px;
+      }
+      &:hover{
+        color:$brand-color;
+        text-decoration: none;
+      }
+    }
+
+    .btn {
+      @include btn-border-slide(transparent, $brand-color, 2px, 0.5s);
+      padding: 0 .25rem;
+      font-size: 1rem;
+      @include respond-to(xs){
+        letter-spacing: 1px;
+        padding: 0 .5rem;
+        font-size: 1.25rem;
+      }
+      @include respond-to(sm){
+        padding: 0 1rem;
+      }
+    }
+  }
+}

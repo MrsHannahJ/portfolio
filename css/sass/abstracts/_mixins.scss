@@ -1,0 +1,109 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+///Media Query Mixin
+/// @author Hugo Giraudel
+@mixin respond-to($breakpoint) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+//xs is <48em
+//sm is 48em and up
+//md is 62em and up
+//lg is 75em and up
+
+
+//@include respond-to(sm) { ... }
+//@include respond-to(md) { ... }
+//@include respond-to(lg) { ... }
+
+
+
+//button themes
+@mixin button-theme($color, $border-color:$color, $background:transparent) {
+  color: $color;
+  border: 1px solid $border-color;
+  background: $background;
+}
+
+
+
+
+
+
+// Mixin for nav line animation
+//Adapted from Thomas Vaeth, https://codepen.io/thomasvaeth/pen/MoXvXp
+@mixin btn-border-slide($color, $hoverColor, $borderWidth, $time) {
+  $easing: cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    &:after {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    height: $borderWidth;
+    width: 100%;
+    background-color: $hoverColor;
+    bottom: 0;
+    transform: translate3d(-105%, 0, 0);
+    transition: transform $time $easing;
+  }
+}
+
+
