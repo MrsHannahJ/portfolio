@@ -1491,21 +1491,24 @@ html {
  */
 /* line 29, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_base.scss */
 a {
-  color: #3C6685;
+  color: #041a25;
   text-decoration: none; }
   /* line 18, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
   a:hover, a:active, a:focus {
     color: #02002a;
     text-decoration: underline; }
 
-/* line 39, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_base.scss */
+/* line 38, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_base.scss */
 h2 {
-  text-align: center; }
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #041a25; }
 
 @font-face {
   font-family: 'fontello';
-  src: url("../../fonts/fontello/fontello.eot?390163");
-  src: url("../../fonts/fontello/fontello.eot?390163#iefix") format("embedded-opentype"), url("../../fonts/fontello/fontello.woff2?390163") format("woff2"), url("../../fonts/fontello/fontello.woff?390163") format("woff"), url("../../fonts/fontello/fontello.ttf?390163") format("truetype"), url("../../fonts/fontello/fontello.svg?390163#fontello") format("svg");
+  src: url("../../fonts/fontello/fontello.eot?29276317");
+  src: url("../../fonts/fontello/fontello.eot?29276317#iefix") format("embedded-opentype"), url("../../fonts/fontello/fontello.woff2?29276317") format("woff2"), url("../../fonts/fontello/fontello.woff?29276317") format("woff"), url("../../fonts/fontello/fontello.ttf?29276317") format("truetype"), url("../../fonts/fontello/fontello.svg?29276317#fontello") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -1515,11 +1518,11 @@ h2 {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?390163#fontello') format('svg');
+    src: url('../../fonts/fontello/fontello.svg?29276317#fontello') format('svg');
   }
 }
 */
-/* line 26, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
+/* line 27, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
@@ -1547,47 +1550,27 @@ h2 {
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
 
-/* line 61, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
+/* line 62, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
 .icon-mail:before {
   content: '\e800'; }
 
 /* '' */
-/* line 62, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
-.icon-mail-1:before {
-  content: '\e801'; }
-
-/* '' */
 /* line 63, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
-.icon-mail-circled:before {
-  content: '\e802'; }
+.icon-up-open:before {
+  content: '\e804'; }
 
-/* '' */
+/* '' */
 /* line 64, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
-.icon-ok:before {
-  content: '\e803'; }
-
-/* '' */
-/* line 65, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
 .icon-github:before {
   content: '\f055'; }
 
 /* '' */
-/* line 66, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
-.icon-github-circled-alt2:before {
-  content: '\f056'; }
-
-/* '' */
-/* line 67, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
-.icon-linkedin-circled:before {
-  content: '\f05b'; }
-
-/* '' */
-/* line 68, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
+/* line 65, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
 .icon-linkedin:before {
   content: '\f05c'; }
 
 /* '' */
-/* line 69, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
+/* line 66, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_fonts.scss */
 .icon-code:before {
   content: '\f121'; }
 
@@ -1598,7 +1581,7 @@ h2 {
 /* line 4, C:/Users/Hannah/Desktop/portfolio/css/sass/base/_typography.scss */
 body {
   color: #02002a;
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font: normal 125%/1.4 "Roboto", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 /**
  * Clear inner floats
@@ -1700,21 +1683,21 @@ header {
   header li {
     display: inline; }
     /* line 38, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
-    header li a {
+    header li a, header li a:active, header li a:focus {
       text-transform: uppercase;
       text-decoration: none;
       color: #ffffff;
       transition: color .4s ease; }
       @media (min-width: 25rem) {
         /* line 38, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
-        header li a {
+        header li a, header li a:active, header li a:focus {
           letter-spacing: 1px; } }
       /* line 46, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
-      header li a:hover {
-        color: #3C6685;
+      header li a:hover, header li a:active:hover, header li a:focus:hover {
+        color: #41BBB3;
         text-decoration: none; }
     /* line 52, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
-    header li .btn {
+    header li .btn-underline {
       position: relative;
       display: inline-block;
       padding: 0.5em 1em;
@@ -1723,35 +1706,35 @@ header {
       padding: 0 .25rem;
       font-size: 1rem; }
       /* line 90, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
-      header li .btn:hover:after {
+      header li .btn-underline:hover:after {
         transform: translate3d(0, 0, 0); }
       /* line 95, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
-      header li .btn:after {
+      header li .btn-underline:after {
         content: "";
         position: absolute;
         left: 0;
         z-index: 9;
         height: 2px;
         width: 100%;
-        background-color: #3C6685;
+        background-color: #41BBB3;
         bottom: 0;
         transform: translate3d(-105%, 0, 0);
         transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
       @media (min-width: 25rem) {
         /* line 52, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
-        header li .btn {
+        header li .btn-underline {
           letter-spacing: 1px;
           padding: 0 .5rem;
           font-size: 1.25rem; } }
       @media (min-width: 48rem) {
         /* line 52, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
-        header li .btn {
+        header li .btn-underline {
           padding: 0 1rem; } }
 
 /* line 5, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_footer.scss */
 footer {
-  background: #3C6685;
-  color: white;
+  background: #041a25;
+  color: #41BBB3;
   text-align: center;
   margin: 0; }
 
@@ -1760,48 +1743,284 @@ footer {
   margin: 0 auto;
   text-align: center;
   padding: 10px;
-  border: 1px solid #3C6685;
+  border: 1px solid #041a25;
   color: white;
   border-radius: 5px; }
 
+/* line 5, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_to-top.scss */
+.go-top {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  padding: 1em;
+  display: none; }
+
+/* line 21, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_to-top.scss */
+.go-top:hover {
+  background-color: rgba(0, 0, 0, 0.6); }
+
+/* line 4, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.chart-wrap {
+  padding: 50px 0;
+  text-align: center; }
+
+/* line 9, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.chart {
+  position: relative;
+  display: inline-block;
+  color: #999;
+  font-size: 20px;
+  text-align: center; }
+
+/* line 17, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.chart figcaption {
+  padding: 50px 25px;
+  width: 190px;
+  height: 190px;
+  border: 20px solid #f0f0f0;
+  border-radius: 100px;
+  line-height: 50px; }
+
+/* line 26, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.chart img {
+  position: absolute;
+  max-width: 100px;
+  max-height: 100px;
+  background: white; }
+
+/* END Container styles */
+/* Colors for the circles and positions for the graphics */
+/* line 35, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.html-chart {
+  top: 50px;
+  left: 45px; }
+
+/* line 40, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.html-chart + svg .outer {
+  stroke: #e34f26; }
+
+/* line 44, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.css {
+  top: 55px;
+  left: 48px; }
+
+/* line 49, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.css + svg .outer {
+  stroke: #0d84ce; }
+
+/* line 53, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.javascript {
+  max-width: 90px;
+  max-height: 90px;
+  top: 45px;
+  left: 45px; }
+
+/* line 60, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.javascript + svg .outer {
+  stroke: #f0e040; }
+
+/* line 64, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.php {
+  width: 200px;
+  height: 200px;
+  top: 45px;
+  left: 45px; }
+
+/* line 71, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.php + svg .outer {
+  stroke: #7588C2; }
+
+/* line 75, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.chart svg {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* line 81, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.outer {
+  fill: transparent;
+  stroke: #333;
+  stroke-width: 20;
+  stroke-dasharray: 534;
+  transition: stroke-dashoffset 1s;
+  -webkit-animation-play-state: running;
+  /* firefox bug fix - won't rotate at 90deg angles */
+  -moz-transform: rotate(-89deg) translateX(-190px); }
+
+/* line 93, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.chart:hover .outer {
+  stroke-dashoffset: 534 !important;
+  -webkit-animation-play-state: paused; }
+
+/* END Circle colors and graphic positions */
+/* Set the initial values for the animation */
+/* line 101, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.chart[data-percent='100'] .outer {
+  stroke-dashoffset: 0;
+  -webkit-animation: show100 2s;
+  animation: show100 2s; }
+
+/* line 107, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.chart[data-percent='75'] .outer {
+  stroke-dashoffset: 133;
+  -webkit-animation: show75 2s;
+  animation: show75 2s; }
+
+/* line 113, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.chart[data-percent='50'] .outer {
+  stroke-dashoffset: 267;
+  -webkit-animation: show50 2s;
+  animation: show50 2s; }
+
+/* line 119, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_charts.scss */
+.chart[data-percent='25'] .outer {
+  stroke-dashoffset: 401;
+  -webkit-animation: show25 2s;
+  animation: show25 2s; }
+
+/* END set initial animation values */
+/* Keyframes for the initial animation */
+@-webkit-keyframes show100 {
+  from {
+    stroke-dashoffset: 537; }
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes show100 {
+  from {
+    stroke-dashoffset: 537; }
+  to {
+    stroke-dashoffset: 0; } }
+
+@-webkit-keyframes show75 {
+  from {
+    stroke-dashoffset: 537; }
+  to {
+    stroke-dashoffset: 134; } }
+
+@keyframes show75 {
+  from {
+    stroke-dashoffset: 537; }
+  to {
+    stroke-dashoffset: 124; } }
+
+@-webkit-keyframes show50 {
+  from {
+    stroke-dashoffset: 537; }
+  to {
+    stroke-dashoffset: 267; } }
+
+@keyframes show50 {
+  from {
+    stroke-dashoffset: 537; }
+  to {
+    stroke-dashoffset: 267; } }
+
+@-webkit-keyframes show25 {
+  from {
+    stroke-dashoffset: 537; }
+  to {
+    stroke-dashoffset: 401; } }
+
+@keyframes show25 {
+  from {
+    stroke-dashoffset: 537; }
+  to {
+    stroke-dashoffset: 401; } }
+
+/* END Keyframes for the initial animation */
+@media screen and (min-width: 910px) {
+  /* line 19, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+  .skill-graphics {
+    display: flex; } }
+
+/* line 24, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+.bargraph-wrap {
+  margin: 0 auto; }
+
+/* line 29, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+.bar {
+  background: #999999;
+  width: 0;
+  margin: .25em 0;
+  color: #fff;
+  position: relative;
+  transition: width 2s, background .2s;
+  -webkit-transform: translate3d(0, 0, 0);
+  clear: both; }
+  /* line 38, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+  .bar:nth-of-type(2n) {
+    background: #b3b3b3; }
+  /* line 41, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+  .bar .label {
+    font-size: .75em;
+    padding: 1em;
+    background: #335263;
+    width: 8em;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    font-weight: bold; }
+    /* line 50, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+    .bar .label.light {
+      background: #446e85; }
+
+/* line 56, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+.count {
+  position: absolute;
+  right: .25em;
+  top: .75em;
+  padding: .15em;
+  font-size: .75em;
+  font-weight: bold; }
+
+/* line 6, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: grey; }
+
 /* ---- particles.js container ---- */
-/* line 8, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 12, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 #particles-js {
   z-index: -99;
   position: absolute;
   width: 100%;
-  height: 100%;
-  background-color: #02002a;
-  background-image: url("");
+  height: 100% !important;
+  background-color: #041a24;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%; }
 
-/* line 21, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 24, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .hero {
   text-align: center;
   color: #ffffff;
   display: block;
   padding: 2rem 0;
   background: transparent; }
-  /* line 30, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 31, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .hero .typewriter {
     margin: 0 auto; }
-  /* line 34, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 35, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .hero .typewriter h1 {
-    color: #ed938f;
+    color: #41BBB3;
     font-size: 2rem;
     margin: 0.5rem 0;
     /* The typing effect */
     /* The typewriter cursor effect */ }
     @media (min-width: 48rem) {
-      /* line 34, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+      /* line 35, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
       .hero .typewriter h1 {
         font-size: 40px;
         font-family: monospace;
         overflow: hidden;
         /* Ensures the content is not revealed until the animation */
-        border-right: 0.15em solid #ed938f;
+        border-right: 0.15em solid #41BBB3;
         /* The typwriter cursor */
         white-space: nowrap;
         /* Keeps the content on a single line */
@@ -1821,89 +2040,276 @@ footer {
   from, to {
     border-color: transparent; }
   50% {
-    border-color: #ed938f; } }
-  /* line 65, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    border-color: #41BBB3; } }
+  /* line 66, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .hero h2 {
     font-size: 1.5rem;
-    margin-top: 0.5rem; }
+    margin-top: 0.5rem;
+    color: #ededed; }
     @media (min-width: 48rem) {
-      /* line 65, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+      /* line 66, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
       .hero h2 {
         font-size: 1.875rem; } }
-  /* line 73, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 75, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .hero ul {
     list-style: none;
     margin-left: 0;
     padding-left: 0.5rem; }
-  /* line 78, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 80, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .hero li {
     font-size: 1.1rem;
-    padding-bottom: 0.5rem; }
+    padding-bottom: 0.5rem;
+    font-weight: 300; }
     @media (min-width: 48rem) {
-      /* line 78, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+      /* line 80, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
       .hero li {
         font-size: 22px; } }
-  /* line 85, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 88, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .hero .check {
     padding-right: 0.5rem;
     font-weight: bold; }
 
-/* line 93, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 96, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .work {
-  background: #ffffff; }
-  /* line 95, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  background: #ffffff;
+  margin-bottom: 2rem; }
+  /* line 99, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .work h2 {
     padding-bottom: 1rem; }
-  /* line 98, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 102, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .work .project-preview {
     margin: 0 auto; }
-  /* line 101, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 105, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .work img {
     border: 5px solid #ffffff;
     width: 100%;
     max-width: 550px; }
     @media (min-width: 62rem) {
-      /* line 101, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+      /* line 105, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
       .work img {
         width: 100%; } }
-  /* line 110, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
-  .work .project-link {
+  /* line 115, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  .work .project-preview a {
     display: block;
     text-align: center;
-    padding: 1rem;
-    color: #c8ebe7; }
-  /* line 116, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    width: 175px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em; }
+  /* line 124, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  .work .btn-draw {
+    position: relative;
+    display: inline-block;
+    color: #0e5b81;
+    border-bottom: 2px solid #0e5b81;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out; }
+    /* line 123, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
+    .work .btn-draw:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 2px;
+      background: #0e5b81;
+      transform: translateY(100%);
+      transition: transform 0.1s ease-in-out;
+      transition-delay: 0.3s; }
+    /* line 136, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
+    .work .btn-draw > span {
+      position: relative;
+      display: block;
+      padding: 0.5em;
+      color: inherit; }
+      /* line 142, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
+      .work .btn-draw > span:before, .work .btn-draw > span:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #0e5b81;
+        transition: transform 0.1s ease-in-out; }
+      /* line 153, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
+      .work .btn-draw > span:before {
+        height: 2px;
+        width: 100%;
+        transform: translateX(100%);
+        transition-delay: 0.2s; }
+      /* line 160, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
+      .work .btn-draw > span:after {
+        height: 100%;
+        width: 2px;
+        transform: translateY(-100%);
+        transition-delay: 0.1s; }
+    /* line 168, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
+    .work .btn-draw:hover:after,
+    .work .btn-draw:hover > span:before,
+    .work .btn-draw:hover > span:after {
+      transform: translate(0, 0); }
+    /* line 174, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
+    .work .btn-draw:hover:after {
+      transition-delay: 0s; }
+    /* line 178, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
+    .work .btn-draw:hover > span:before {
+      transition-delay: 0.1s; }
+    /* line 182, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
+    .work .btn-draw:hover > span:after {
+      transition-delay: 0.2s; }
+    /* line 186, C:/Users/Hannah/Desktop/portfolio/css/sass/abstracts/_mixins.scss */
+    .work .btn-draw:hover {
+      color: #41BBB3;
+      background-color: #0e5b81;
+      transition-delay: 0.3s; }
+  /* line 128, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .work h3 {
     margin-top: 0;
     margin-bottom: 0; }
-    /* line 119, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    /* line 131, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
     .work h3 a {
-      color: #c8ebe7; }
-  /* line 123, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+      color: #0e5b81; }
+  /* line 135, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .work h4 {
     margin-top: 0;
-    color: #ed938f; }
-  /* line 127, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    color: #41BBB3; }
+  /* line 139, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .work p {
     font-size: 1rem; }
-  /* line 130, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 142, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .work ul {
     list-style: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap; }
-    /* line 135, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    /* line 147, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
     .work ul li {
       display: inline;
       padding: 0.5rem;
       margin: 0.5rem;
-      border: 2px solid #ed938f;
+      border: 2px solid #0e5b81;
       text-align: center;
-      color: #ed938f;
+      color: #0e5b81;
       font-size: 0.9rem; }
 
-/* line 147, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
-.about, .contact {
-  background: #c8ebe7; }
+/* line 160, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+.about {
+  background: rgba(65, 187, 179, 0.2); }
+
+/* line 164, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+.about img {
+  border-radius: 50%;
+  width: 200px;
+  border: 5px solid #0e5b81;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.1); }
+
+@media (min-width: 48rem) {
+  /* line 176, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  img.girl {
+    float: right;
+    margin: 0 0 1rem 1rem; }
+  /* line 180, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  img.cat {
+    float: left;
+    margin: 1rem 1.5rem 1rem 0; } }
+
+@media (min-width: 62rem) {
+  /* line 186, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  img.cat {
+    float: left;
+    margin: 1rem 1.5rem 7rem 0; } }
+
+/* line 192, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+.contact {
+  background: #041a25; }
+  /* line 194, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  .contact ul {
+    list-style: none; }
+    /* line 196, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    .contact ul li {
+      display: inline; }
+  /* line 200, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  .contact a i {
+    color: white !important; }
+  /* line 203, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  .contact p, .contact li {
+    color: white !important; }
+
+/* line 209, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+.contact .me {
+  border-radius: 50%;
+  width: 200px;
+  display: block;
+  margin: 0 auto; }
+  @media (min-width: 48rem) {
+    /* line 209, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    .contact .me {
+      width: 300px; } }
+
+@media (min-width: 48rem) {
+  /* line 228, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  .contact {
+    align-items: center;
+    background-color: #041a25;
+    display: flex;
+    height: 80%;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0px;
+    padding: 8rem 0px;
+    background: url(../../img/7c086b_5bea95d9d4fc4c9bbf4645c3b3847df7-mv2_d_2555_1278_s_2.jpg); }
+  /* line 235, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  .glow {
+    animation: glow_shadow linear infinite 15s;
+    position: relative;
+    z-index: 2;
+    background: #041a25;
+    margin: 0 auto;
+    padding: 1rem;
+    barder-radius: 50%; }
+    /* line 243, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    .glow h2 {
+      align-items: center;
+      background-color: transparent;
+      display: flex;
+      height: auto;
+      justify-content: space-around;
+      width: 80%;
+      animation: glow_ring linear infinite 15s, glow_text linear infinite 15s;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      display: block;
+      text-align: center;
+      padding: 0; }
+  /* line 254, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  .glow-round {
+    animation: glow_shadow linear infinite 15s;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    background: #041a25;
+    margin: 0 auto; }
+  /* line 262, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  .glow, .glow-round {
+    margin: 0 1rem; }
+  @keyframes glow_shadow {
+    0%, 100% {
+      box-shadow: 0px 0px 5vw 1px #1586BE; }
+    50% {
+      box-shadow: 0px 0px 5vw 1px #41BBB3; } }
+  @keyframes glow_text {
+    0%, 100% {
+      color: #1586BE; }
+    50% {
+      color: #41BBB3; } }
+  @keyframes glow_ring {
+    0%, 100% {
+      border-color: #1586BE; }
+    50% {
+      border-color: #41BBB3; } } }
 
 /*# sourceMappingURL=main.css.map */

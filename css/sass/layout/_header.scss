@@ -35,7 +35,7 @@ header{
   }
   li{
     display: inline;
-    a {
+    a, a:active, a:focus {
       text-transform: uppercase;
       text-decoration: none;
       color: $white;
@@ -44,13 +44,13 @@ header{
         letter-spacing: 1px;
       }
       &:hover{
-        color:$brand-color;
+        color:$accent-color;
         text-decoration: none;
       }
     }
 
-    .btn {
-      @include btn-border-slide(transparent, $brand-color, 2px, 0.5s);
+    .btn-underline {
+      @include btn-border-slide(transparent, $accent-color, 2px, 0.5s);
       padding: 0 .25rem;
       font-size: 1rem;
       @include respond-to(xs){

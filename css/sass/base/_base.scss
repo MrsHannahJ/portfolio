@@ -29,7 +29,6 @@ html {
 a {
   color: $brand-color;
   text-decoration: none;
-
   @include on-event {
     color: $text-color;
     text-decoration: underline;
@@ -38,5 +37,7 @@ a {
 
 h2{
   text-align: center;
-//  color: $brand-color;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $brand-color;
 }

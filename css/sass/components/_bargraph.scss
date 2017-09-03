@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the bar graph component.
+// -----------------------------------------------------------------------------
+@import
+  '../abstracts/variables',
+  '../abstracts/functions',
+  '../abstracts/mixins';
+
+//$red : #e74c3c ;
+//$redAL : rgba(231, 76, 60, 0.95);
+//$dark :  #3d3d3d;
+
+
+
+//*{ box-sizing:border-box;}
+
+
+@media screen and (min-width: 910px){
+  .skill-graphics{
+    display: flex;
+  }
+}
+
+.bargraph-wrap {
+//  width: 50%;
+  margin: 0 auto;
+}
+
+ .bar {
+ 	background: $mid-grey;
+ 	width: 0;
+ 	margin: .25em 0;
+ 	color: #fff;
+ 	position: relative;
+ 	 transition:width 2s, background .2s;
+   -webkit-transform: translate3d(0,0,0);
+ 	 clear: both;
+ 	 &:nth-of-type(2n) {
+ 	 	background:lighten($mid-grey , 10% );
+ 	 }
+ 	 .label {
+		font-size: .75em;
+		padding: 1em;
+		background: #335263;
+		width: 8em;
+		display: inline-block;
+		position: relative;
+		z-index: 2;
+		font-weight: bold;
+		 &.light {
+ 	 	background:lighten(#335263 , 10% );
+ 	 }
+
+}
+ }
+ .count {
+	position: absolute;
+	right: .25em;
+	top: .75em;
+ 	padding: .15em;
+	font-size: .75em;
+	font-weight: bold;
+ }

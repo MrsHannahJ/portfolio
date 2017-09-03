@@ -6,7 +6,7 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: 'Roboto', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
@@ -26,33 +26,46 @@ $text-color: #02002a !default;
 /// @type Color
 $text-light-color: #ffffff !default;
 
+
+
 /// Main brand color
 /// @type Color
-$brand-color: #3C6685 !default;
+//$brand-color: #3C6685 !default;
+$brand-color: #041a25;
+
+
+$brand-80: lighten($brand-color, 20%);
+
+$brand-30: lighten($brand-color, 70%);
 
 /// Main light brand color
 /// @type Color
-$brand-light-color: #c8ebe7 !default;
+//$brand-light-color: #41BBB3 !default;
+$brand-light-color: #1586BE !default;
+
+
 
 /// Opaque light brand color
 /// @type Color
-$brand-light-opaque: rgba(200,235,231,0.5) !default;
+//$brand-light-opaque: rgba(200,235,231,0.5) !default;
 
 /// Main dark brand color
 /// @type Color
-$accent-color: #ed938f !default;
+$accent-color: #41BBB3 !default;
 
-///// Light grey
-///// @type Color
-//$light-grey: rgb(237, 237, 237) !default;
-//
-///// Medium grey
-///// @type Color
-//$mid-grey: rgb(153, 153, 153) !default;
-//
-///// Dark grey
-///// @type Color
-//$dark-grey: rgb(68, 68, 68) !default;
+$accent-30: rgba(65,187,179, 0.2);
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
 
 
 
