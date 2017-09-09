@@ -31,17 +31,13 @@ $text-light-color: #ffffff !default;
 /// Main brand color
 /// @type Color
 //$brand-color: #3C6685 !default;
-$brand-color: #041a25;
+$brand-color: #041a25 !default;
 
-
-$brand-80: lighten($brand-color, 20%);
-
-$brand-30: lighten($brand-color, 70%);
 
 /// Main light brand color
 /// @type Color
 //$brand-light-color: #41BBB3 !default;
-$brand-light-color: #1586BE !default;
+$brand-light-color: lighten($brand-color, 20%) !default;
 
 
 
@@ -53,7 +49,6 @@ $brand-light-color: #1586BE !default;
 /// @type Color
 $accent-color: #41BBB3 !default;
 
-$accent-30: rgba(65,187,179, 0.2);
 
 /// Light grey
 /// @type Color

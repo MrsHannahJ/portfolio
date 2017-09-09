@@ -1,3 +1,39 @@
+// Trigger CSS animations on scroll.
+// Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
+
+jQuery(function($) {
+  
+  // Function which adds the 'animated' class to any '.animatable' in view
+  var doAnimations = function() {
+    
+    // Calc current offset and get all animatables
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+    
+    // Unbind scroll handler if we have no animatables
+    if ($animatables.size() == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+    
+    // Check all animatables and animate them if necessary
+		$animatables.each(function(i) {
+       var $animatable = $(this);
+			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+			}
+    });
+
+	};
+  
+  // Hook doAnimations on scroll, and trigger a scroll
+	$(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
+});
+
+
+
+
 /* ---- particles.js config ---- */
 //Credit: Vincent Garreau, http://vincentgarreau.com/particles.js/
 particlesJS("particles-js", {
@@ -114,69 +150,72 @@ particlesJS("particles-js", {
 
 
 //to top appear animation
- 
-$(document).ready(function() {
-			// Show or hide the sticky back to top button
-			$(window).scroll(function() {
-				if ($(this).scrollTop() > 200) {
-					$('#go-top').fadeIn(200);
-				} else {
-					$('#go-top').fadeOut(200);
-				}
-			});
-		
 
-
-
-/* ---- Bar Graph Animation ---- */
-//Inspired by alex rodrigues, https://codepen.io/alex_rodrigues/pen/ogYZdr - and - Daniel Tonon, https://stackoverflow.com/questions/21561480/trigger-event-when-user-scroll-to-specific-element-with-jquery
-
-var element_position = $('#bargraphs').offset().top;
-var screen_height = $(window).height();
-var activation_offset = 0.5;//determines how far up the the page the element needs to be before triggering the function
-var activation_point = element_position - (screen_height * activation_offset);
-var max_scroll_height = $('body').height() - screen_height - 5;//-5 for a little bit of buffer
-
-//Does something when user scrolls to it OR
-//Does it when user has reached the bottom of the page and hasn't triggered the function yet
-$(window).on('scroll', function() {
-    var y_scroll_pos = window.pageYOffset;
-
-    var element_in_view = y_scroll_pos > activation_point;
-    var has_reached_bottom_of_page = max_scroll_height <= y_scroll_pos && !element_in_view;
-
-    if(element_in_view || has_reached_bottom_of_page) {
-
-setTimeout(function start (){
-  
-  $('.bar').each(function(i){
-    var $bar = $(this);
-    $(this).append('<span class="count"></span>')
-    setTimeout(function(){
-      $bar.css('width', $bar.attr('data-percent'));
-    }, i*100);
+$(document).ready(function () {
+  // Show or hide the sticky back to top button
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      $('#go-top').fadeIn(200);
+    } else {
+      $('#go-top').fadeOut(200);
+    }
   });
 
-$('.count').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).parent('.bar').attr('data-percent')
-    }, {
-        duration: 1500,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now) +'%');
-        }
-    });
+
+
+
+  /* ---- Bar Graph Animation ---- */
+  //Inspired by alex rodrigues, https://codepen.io/alex_rodrigues/pen/ogYZdr - and - Daniel Tonon, https://stackoverflow.com/questions/21561480/trigger-event-when-user-scroll-to-specific-element-with-jquery
+
+  var element_position = $('#bargraphs').offset().top,
+      screen_height = $(window).height(),
+      activation_offset = 0.5, //determines how far up the the page the element needs to be before triggering the function
+      activation_point = element_position - (screen_height * activation_offset),
+      max_scroll_height = $('body').height() - screen_height - 5; //-5 for a little bit of buffer
+
+  //Does something when user scrolls to it OR
+  //Does it when user has reached the bottom of the page and hasn't triggered the function yet
+  $(window).on('scroll', function () {
+    var y_scroll_pos = window.pageYOffset,
+
+    element_in_view = y_scroll_pos > activation_point,
+    has_reached_bottom_of_page = max_scroll_height <= y_scroll_pos && !element_in_view;
+
+    if (element_in_view || has_reached_bottom_of_page) {
+
+      setTimeout(function start() {
+
+        $('.bar').each(function (i) {
+          var $bar = $(this);
+          $(this).append('<span class="count"></span>')
+          setTimeout(function () {
+            $bar.css('width', $bar.attr('data-percent'));
+          }, i * 100);
+        });
+
+        $('.count').each(function () {
+          $(this).prop('Counter', 0).animate({
+            Counter: $(this).parent('.bar').attr('data-percent')
+          }, {
+            duration: 1500,
+            easing: 'swing',
+            step: function (now) {
+              $(this).text(Math.ceil(now) + '%');
+            }
+          });
+        });
+
+      })
+
+      $(window).off('scroll')
+    }
+  });
+
+
 });
 
-})
-
-    $(window).off('scroll')
-   }
-});
 
 
-});
 
 
 
@@ -185,388 +224,391 @@ $('.count').each(function () {
 
 
 //google maps
-      function initMap() {
-        var uluru = {lat: 33.761022, lng: -118.152724};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: uluru,
-          disableDefaultUI: true,
-          zoomControl: true,
-        //  mapTypeControl: true,
-          scaleControl: true,
-        //  streetViewControl: true,
-          rotateControl: true,
-        //  fullscreenControl: true,
-          styles: [
-    {
+function initMap() {
+  var uluru = {
+    lat: 33.761022,
+    lng: -118.152724
+  };
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: uluru,
+    disableDefaultUI: true,
+    zoomControl: true,
+    //  mapTypeControl: true,
+    scaleControl: true,
+    //  streetViewControl: true,
+    rotateControl: true,
+    //  fullscreenControl: true,
+    styles: [
+      {
         "featureType": "all",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#041a25"
+          {
+            "color": "#041a25"
             }
         ]
     },
-    {
+      {
         "featureType": "all",
         "elementType": "labels.text.fill",
         "stylers": [
-            {
-                "gamma": 0.01
+          {
+            "gamma": 0.01
             },
-            {
-                "lightness": 20
+          {
+            "lightness": 20
             }
         ]
     },
-    {
+      {
         "featureType": "all",
         "elementType": "labels.text.stroke",
         "stylers": [
-            {
-                "saturation": -31
+          {
+            "saturation": -31
             },
-            {
-                "lightness": -33
+          {
+            "lightness": -33
             },
-            {
-                "weight": 2
+          {
+            "weight": 2
             },
-            {
-                "gamma": 0.8
+          {
+            "gamma": 0.8
             }
         ]
     },
-    {
+      {
         "featureType": "all",
         "elementType": "labels.icon",
         "stylers": [
-            {
-                "visibility": "off"
+          {
+            "visibility": "off"
             }
         ]
     },
-    {
+      {
         "featureType": "administrative",
         "elementType": "all",
         "stylers": [
-            {
-                "color": "#898989"
+          {
+            "color": "#898989"
             },
-            {
-                "visibility": "simplified"
+          {
+            "visibility": "simplified"
             }
         ]
     },
-    {
+      {
         "featureType": "administrative",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#220606"
+          {
+            "color": "#220606"
             }
         ]
     },
-    {
+      {
         "featureType": "administrative",
         "elementType": "geometry.stroke",
         "stylers": [
-            {
-                "visibility": "off"
+          {
+            "visibility": "off"
             }
         ]
     },
-    {
+      {
         "featureType": "administrative.country",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#ff0000"
+          {
+            "color": "#ff0000"
             }
         ]
     },
-    {
+      {
         "featureType": "administrative.land_parcel",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#ff0000"
+          {
+            "color": "#ff0000"
             }
         ]
     },
-    {
+      {
         "featureType": "landscape",
         "elementType": "all",
         "stylers": [
-            {
-                "visibility": "simplified"
+          {
+            "visibility": "simplified"
             },
-            {
-                "color": "#00a8ff"
+          {
+            "color": "#00a8ff"
             }
         ]
     },
-    {
+      {
         "featureType": "landscape",
         "elementType": "geometry",
         "stylers": [
-            {
-                "lightness": 30
+          {
+            "lightness": 30
             },
-            {
-                "saturation": 30
+          {
+            "saturation": 30
             },
-            {
-                "visibility": "simplified"
+          {
+            "visibility": "simplified"
             }
         ]
     },
-    {
+      {
         "featureType": "landscape.man_made",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#1c3a4a"
+          {
+            "color": "#1c3a4a"
             }
         ]
     },
-    {
+      {
         "featureType": "landscape.natural",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#193849"
+          {
+            "color": "#193849"
             }
         ]
     },
-    {
+      {
         "featureType": "landscape.natural.landcover",
         "elementType": "all",
         "stylers": [
-            {
-                "color": "#ff0000"
+          {
+            "color": "#ff0000"
             }
         ]
     },
-    {
+      {
         "featureType": "landscape.natural.landcover",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#ff0000"
+          {
+            "color": "#ff0000"
             }
         ]
     },
-    {
+      {
         "featureType": "landscape.natural.landcover",
         "elementType": "geometry.fill",
         "stylers": [
-            {
-                "color": "#05aaff"
+          {
+            "color": "#05aaff"
             }
         ]
     },
-    {
+      {
         "featureType": "landscape.natural.terrain",
         "elementType": "all",
         "stylers": [
-            {
-                "color": "#ff0000"
+          {
+            "color": "#ff0000"
             }
         ]
     },
-    {
+      {
         "featureType": "landscape.natural.terrain",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#ff0000"
+          {
+            "color": "#ff0000"
             }
         ]
     },
-    {
+      {
         "featureType": "landscape.natural.terrain",
         "elementType": "geometry.fill",
         "stylers": [
-            {
-                "color": "#335263"
+          {
+            "color": "#335263"
             }
         ]
     },
-    {
+      {
         "featureType": "poi",
         "elementType": "geometry",
         "stylers": [
-            {
-                "saturation": 20
+          {
+            "saturation": 20
             }
         ]
     },
-    {
+      {
         "featureType": "poi.attraction",
         "elementType": "all",
         "stylers": [
-            {
-                "color": "#335263"
+          {
+            "color": "#335263"
             }
         ]
     },
-    {
+      {
         "featureType": "poi.attraction",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#193849"
+          {
+            "color": "#193849"
             }
         ]
     },
-    {
+      {
         "featureType": "poi.business",
         "elementType": "all",
         "stylers": [
-            {
-                "color": "#335263"
+          {
+            "color": "#335263"
             }
         ]
     },
-    {
+      {
         "featureType": "poi.government",
         "elementType": "all",
         "stylers": [
-            {
-                "color": "#335263"
+          {
+            "color": "#335263"
             }
         ]
     },
-    {
+      {
         "featureType": "poi.medical",
         "elementType": "all",
         "stylers": [
-            {
-                "color": "#335263"
+          {
+            "color": "#335263"
             }
         ]
     },
-    {
+      {
         "featureType": "poi.park",
         "elementType": "geometry",
         "stylers": [
-            {
-                "lightness": 20
+          {
+            "lightness": 20
             },
-            {
-                "saturation": -20
+          {
+            "saturation": -20
             },
-            {
-                "color": "#335263"
+          {
+            "color": "#335263"
             }
         ]
     },
-    {
+      {
         "featureType": "poi.park",
         "elementType": "labels.text.stroke",
         "stylers": [
-            {
-                "visibility": "off"
+          {
+            "visibility": "off"
             }
         ]
     },
-    {
+      {
         "featureType": "poi.place_of_worship",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#335263"
+          {
+            "color": "#335263"
             }
         ]
     },
-    {
+      {
         "featureType": "poi.school",
         "elementType": "geometry",
         "stylers": [
-            {
-                "visibility": "off"
+          {
+            "visibility": "off"
             },
-            {
-                "color": "#335263"
+          {
+            "color": "#335263"
             }
         ]
     },
-    {
+      {
         "featureType": "poi.sports_complex",
         "elementType": "geometry",
         "stylers": [
-            {
-                "color": "#335263"
+          {
+            "color": "#335263"
             }
         ]
     },
-    {
+      {
         "featureType": "road",
         "elementType": "all",
         "stylers": [
-            {
-                "visibility": "on"
+          {
+            "visibility": "on"
             }
         ]
     },
-    {
+      {
         "featureType": "road",
         "elementType": "geometry",
         "stylers": [
-            {
-                "lightness": 10
+          {
+            "lightness": 10
             },
-            {
-                "saturation": -30
+          {
+            "saturation": -30
             },
-            {
-                "visibility": "on"
+          {
+            "visibility": "on"
             },
-            {
-                "color": "#0c2d37"
+          {
+            "color": "#0c2d37"
             }
         ]
     },
-    {
+      {
         "featureType": "road",
         "elementType": "geometry.stroke",
         "stylers": [
-            {
-                "saturation": 25
+          {
+            "saturation": 25
             },
-            {
-                "lightness": 25
+          {
+            "lightness": 25
             }
         ]
     },
-    {
+      {
         "featureType": "road",
         "elementType": "labels",
         "stylers": [
-            {
-                "visibility": "simplified"
+          {
+            "visibility": "simplified"
             },
-            {
-                "color": "#51626a"
+          {
+            "color": "#51626a"
             }
         ]
     },
-    {
+      {
         "featureType": "water",
         "elementType": "all",
         "stylers": [
-            {
-                "color": "#041a25"
+          {
+            "color": "#041a25"
             }
         ]
     }
 ]
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-          icon: 'http://www.recyclemyelectronics.ca/on/wp-content/uploads/2017/03/blue-dot.png'
-        });
-      
-      }
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    icon: 'http://www.recyclemyelectronics.ca/on/wp-content/uploads/2017/03/blue-dot.png'
+  });
+
+}
