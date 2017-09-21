@@ -1,0 +1,19 @@
+{
+    "jscompiler": {
+        "outputs": [
+            {
+                "inputs": [
+                  "js/vendor/jquery-1.12.0.min.js",
+                  "js/plugins.js",
+                  "js/vendor/particles.js-master/particles.min.js",
+                  "js/vendor/zenscroll-latest/zenscroll-min.js",
+                  "js/main.js"
+                ],
+                "output": "js/main.min.js",
+                "generateMap": true,
+                "mangle": true,
+                "isolate": false
+            }
+        ]
+    }
+}

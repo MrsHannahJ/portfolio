@@ -2,4 +2,10 @@
 
 # Allow crawling of all content
 User-agent: *
-Disallow:
+
+Disallow: /vaginismus/
+Disallow: /cbttf/
+Disallow: /accelerate/
+Disallow: /joanna-august/
+Disallow: /joanna-august/
+Disallow: LICENSE.txt

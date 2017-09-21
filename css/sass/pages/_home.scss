@@ -44,10 +44,10 @@
   color: #41BBB3;
   font-size: 2rem;
   margin: 0.5rem 0;
+  font-family: "Lucida Console", monospace;
   @include respond-to(sm){
     font-size: 40px;
 //typewriter effect adapted from Geoff Graham, https://codepen.io/geoffgraham/pen/jrWwWM
-    font-family: monospace;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid $accent-color; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -185,29 +185,35 @@ box-shadow: inset 0px 7px 10px 0px rgba(0,0,0,0.3);
   width: 200px;
   border: 5px solid $brand-light-color;
   display: block;
-  margin: 1rem;
+  margin: 1rem auto;
   text-align: center;
 //  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
   border: 2px solid $brand-light-color;
+  @include respond-to(sm){
   shape-outside:circle();
+    margin: 1rem;
+  }
+}
+
+img.girl{
+  -webkit-box-shadow: 3px 3px 15px 0px rgba(68,110,133,1);
+  -moz-box-shadow: 3px 3px 15px 0px rgba(68,110,133,1);
+  box-shadow: 3px 3px 15px 0px rgba(68,110,133,1);
+}
+img.cat{
+  -webkit-box-shadow: -3px -3px 15px 0px rgba(68,110,133,1);
+  -moz-box-shadow: -3px -3px 15px 0px rgba(68,110,133,1);
+  box-shadow: -3px -3px 15px 0px rgba(68,110,133,1);
 }
 
 @include respond-to(sm){
-
-img.girl{
-  float: right;
-  
-    -webkit-box-shadow: 3px 3px 15px 0px rgba(68,110,133,1);
--moz-box-shadow: 3px 3px 15px 0px rgba(68,110,133,1);
-box-shadow: 3px 3px 15px 0px rgba(68,110,133,1);
-}
-img.cat{
-  float: left;
-    -webkit-box-shadow: -3px -3px 15px 0px rgba(68,110,133,1);
--moz-box-shadow: -3px -3px 15px 0px rgba(68,110,133,1);
-box-shadow: -3px -3px 15px 0px rgba(68,110,133,1);
-}
+  img.girl{
+    float: right;
   }
+  img.cat{
+    float: left;
+  }
+}
 
 
 //Skills Section
@@ -226,9 +232,18 @@ box-shadow: -3px -3px 15px 0px rgba(68,110,133,1);
     text-indent: -20px;
   }
 }
+
+.bargraph-wrap{
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.skill-support{
+  margin-top: 1rem;
+}
 .skill-support img{
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   width: 200px;
 }
 
@@ -242,7 +257,7 @@ display: none;}
 //Contact Section
 
 .contact{
-  background: url(../../img/stary.jpg);
+  background: url(../../img/stary.JPG);
   /* Set a specific height */
     height: 750px;
 
@@ -341,94 +356,6 @@ box-shadow: -3px -3px 15px 0px rgba(65,187,179,1);
    background-color: grey;
  }
 
-
-
-//.contact{
-//  background: $brand-color;
-//  ul{
-//    list-style: none;
-//    li{
-//      display: inline;
-//    }
-//  }
-//  a i{
-//    color:white !important;
-//  }
-//  p, li{
-////  color: #335263;
-//    color:white !important;
-//  }
-//}
-//
-//.contact .me{
-//  border-radius: 50%;
-//  width: 200px;
-//  display: block;
-//  margin: 0 auto;
-//  @include respond-to(sm){
-//    width: 300px;
-//  }
-//}
-//
-//
-////back glow
-//
-//@include respond-to(sm){
-//
-//$g: $brand-light-color;
-//$i: $accent-color;
-//
-//
-//.contact{
-//  @include flex_center(80%, 100%, $brand-color);
-//  margin: 0px;
-//  padding: 8rem 0px;
-//  background: url(../../img/7c086b_5bea95d9d4fc4c9bbf4645c3b3847df7-mv2_d_2555_1278_s_2.jpg);
-//}
-//
-//.glow{
-//  animation: glow_shadow linear infinite 15s;
-//  position: relative;
-//  z-index: 2;
-//  background: $brand-color;
-//  margin: 0 auto;
-//  padding: 1rem;
-//  barder-radius: 50%;
-//  h2{
-//    @include flex_center(auto, 80%, transparent);
-//    animation: glow_ring linear infinite 15s, glow_text linear infinite 15s;
-//    font-family: 'Roboto', sans-serif;
-//    font-weight: 300;
-//    display: block;
-//    text-align: center;
-//    padding: 0;
-//  }
-//}
-//  
-//.glow-round{
-//  animation: glow_shadow linear infinite 15s;
-//  border-radius: 50%;
-//  position: relative;
-//  z-index: 2;
-//  background: $brand-color;
-//  margin: 0 auto;
-//  }
-//  .glow, .glow-round{
-//margin: 0 1rem;
-//  }
-//@keyframes glow_shadow {
-//    0%, 100%   { box-shadow: 0px 0px 5vw 1px $g; }
-//    50%        { box-shadow: 0px 0px 5vw 1px $i; }
-//}
-//@keyframes glow_text {
-//    0%, 100%   { color: $g; }
-//    50%        { color: $i; }
-//}
-//@keyframes glow_ring {
-//    0%, 100%   { border-color: $g; }
-//    50%        { border-color: $i; }
-//}
-//  }
 
 
 .animatable {

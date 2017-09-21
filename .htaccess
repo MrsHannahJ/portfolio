@@ -323,7 +323,9 @@ AddDefaultCharset utf-8
     RewriteEngine On
 
     # (2)
-    Options +FollowSymlinks
+# For security reasons, Option followsymlinks cannot be overridden.
+#    Options +FollowSymlinks
+    Options +SymLinksIfOwnerMatch
 
     # (3)
     # Options +SymLinksIfOwnerMatch
@@ -982,3 +984,108 @@ FileETag None
 #     RewriteCond %{REQUEST_FILENAME} !-f
 #     RewriteRule ^(.+)\.(\d+)\.(bmp|css|cur|gif|ico|jpe?g|js|png|svgz?|webp|webmanifest)$ $1.$3 [L]
 # </IfModule>
+
+
+
+#----SECURITY------
+
+#secure htaccess file
+<Files .htaccess>
+	Order allow,deny
+	Deny from all
+</Files>
+
+# disable the server signature
+ServerSignature Off
+
+# prevent viewing of a specific file
+<files robots.txt>
+	Order allow,deny
+	Deny from all
+</files>
+
+# prevent viewing of specific file types
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|json)$">
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>
+
+# limit server request methods - block these methods
+RewriteCond %{REQUEST_METHOD} ^(CONNECT|DEBUG|MOVE|TRACE|TRACK) [NC]
+RewriteRule .* - [F,L]
+
+# disable directory browsing
+Options All -Indexes
+
+# limit access to local area network
+<Limit GET POST PUT>
+	Order deny,allow
+	Deny from all
+	Allow from 205.186.139.247
+</Limit>
+
+
+
+#----PERFORMANCE------
+
+# pass the default character set
+AddDefaultCharset utf-8
+
+#Deflate -aka zip- files delivered to browser
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# cache images and flash content for one month
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf)$">
+	Header set Cache-Control "max-age=2592000"
+</FilesMatch>
+
+# cache text and css and javascript files for one week
+<FilesMatch ".(js|css|pdf|txt)$">
+	Header set Cache-Control "max-age=604800"
+</FilesMatch>
+
+# cache html and htm files for one day
+<FilesMatch ".(html|htm)$">
+	Header set Cache-Control "max-age=43200"
+</FilesMatch>
+
+# explicitly disable caching for scripts and other dynamic files
+<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+	Header unset Cache-Control
+</FilesMatch>
+
+
+
+#----ERRORS------
+
+#To set up 404 page
+ErrorDocument 404 /404/index.php
+
+#----REDIRECTS------
+
+#Add https and www to anything without it
+#RewriteEngine On
+#RewriteCond %{HTTP_HOST}  !^www\.coderjones\.com$ [NC]
+#RewriteRule ^(.*) https://www.coderjones.com/$1 [L,R]
+
+#Remove indexDOTphp from end of url
+RewriteBase /
+RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
+RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
+
+#Redirect any old Wordpress directories or files to home page
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteBase /
+RewriteCond %{QUERY_STRING} ^.+$
+RewriteRule ^wp-(.*)$ /index.php? [L,R=301,NC]

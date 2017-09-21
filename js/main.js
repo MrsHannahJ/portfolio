@@ -58,7 +58,7 @@ particlesJS("particles-js", {
         "nb_sides": 0
       },
       "image": {
-        "src": "https://www.codeschool.com/assets/meta/og-avatar-541739b5880b8586eeb033747a8a2cf3e689860d59b506d29a9633aed86d057d.png",
+        "src": "img/code-logo.png",
         "width": 300,
         "height": 300
       }
@@ -608,7 +608,27 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: uluru,
     map: map,
-    icon: 'http://www.recyclemyelectronics.ca/on/wp-content/uploads/2017/03/blue-dot.png'
+    icon: 'https://coderjones.com/img/blue-dot.png'
   });
 
 }
+
+ 
+
+
+//Google Analytics
+
+      (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+          function() {
+            (b[l].q = b[l].q || []).push(arguments)
+          });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+      }(window, document, 'script', 'ga'));
+      ga('create', 'UA-105665758-1', 'auto');
+      ga('send', 'pageview');

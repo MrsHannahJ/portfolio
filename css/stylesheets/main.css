@@ -1763,6 +1763,7 @@ body {
 
 header {
   background: none;
+  padding-top: 1rem;
 }
 header .container {
   padding: 0;
@@ -1780,7 +1781,7 @@ header .logo {
 header .logo img {
   display: block;
   margin: auto;
-  width: 75px;
+  width: 65px;
 }
 @media (min-width: 62rem) {
   header .logo img {
@@ -2161,13 +2162,13 @@ footer p {
   color: #41BBB3;
   font-size: 2rem;
   margin: 0.5rem 0;
+  font-family: "Lucida Console", monospace;
   /* The typing effect */
   /* The typewriter cursor effect */
 }
 @media (min-width: 48rem) {
   .hero .typewriter h1 {
     font-size: 40px;
-    font-family: monospace;
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
     border-right: 0.15em solid #41BBB3;
@@ -2373,25 +2374,36 @@ footer p {
   width: 200px;
   border: 5px solid #0e5b81;
   display: block;
-  margin: 1rem;
+  margin: 1rem auto;
   text-align: center;
   border: 2px solid #0e5b81;
-  shape-outside: circle();
+}
+@media (min-width: 48rem) {
+  .about img {
+    shape-outside: circle();
+    margin: 1rem;
+  }
+}
+
+img.girl {
+  -webkit-box-shadow: 3px 3px 15px 0px #446e85;
+  -moz-box-shadow: 3px 3px 15px 0px #446e85;
+  box-shadow: 3px 3px 15px 0px #446e85;
+}
+
+img.cat {
+  -webkit-box-shadow: -3px -3px 15px 0px #446e85;
+  -moz-box-shadow: -3px -3px 15px 0px #446e85;
+  box-shadow: -3px -3px 15px 0px #446e85;
 }
 
 @media (min-width: 48rem) {
   img.girl {
     float: right;
-    -webkit-box-shadow: 3px 3px 15px 0px #446e85;
-    -moz-box-shadow: 3px 3px 15px 0px #446e85;
-    box-shadow: 3px 3px 15px 0px #446e85;
   }
 
   img.cat {
     float: left;
-    -webkit-box-shadow: -3px -3px 15px 0px #446e85;
-    -moz-box-shadow: -3px -3px 15px 0px #446e85;
-    box-shadow: -3px -3px 15px 0px #446e85;
   }
 }
 .skills {
@@ -2409,9 +2421,18 @@ footer p {
   text-indent: -20px;
 }
 
+.bargraph-wrap {
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.skill-support {
+  margin-top: 1rem;
+}
+
 .skill-support img {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   width: 200px;
 }
 
@@ -2420,7 +2441,7 @@ footer p {
 }
 
 .contact {
-  background: url(../../img/stary.jpg);
+  background: url(../../img/stary.JPG);
   /* Set a specific height */
   height: 750px;
   /* Create the parallax scrolling effect */

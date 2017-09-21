@@ -1648,55 +1648,56 @@ body {
 
 /* line 5, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
 header {
-  background: none; }
-  /* line 7, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+  background: none;
+  padding-top: 1rem; }
+  /* line 8, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
   header .container {
     padding: 0;
     padding-top: 1rem; }
     @media (min-width: 62rem) {
-      /* line 7, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+      /* line 8, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
       header .container {
         display: flex;
         padding-top: 0; } }
-  /* line 15, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+  /* line 16, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
   header .logo {
     line-height: 1; }
-  /* line 19, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+  /* line 20, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
   header .logo img {
     display: block;
     margin: auto;
-    width: 75px; }
+    width: 65px; }
     @media (min-width: 62rem) {
-      /* line 19, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+      /* line 20, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
       header .logo img {
         vertical-align: middle; } }
-  /* line 28, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+  /* line 29, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
   header ul {
     padding-left: 0;
     list-style: none;
     text-align: center; }
     @media (min-width: 62rem) {
-      /* line 28, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+      /* line 29, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
       header ul {
         text-align: right; } }
-  /* line 36, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+  /* line 37, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
   header li {
     display: inline; }
-    /* line 38, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+    /* line 39, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
     header li a, header li a:active, header li a:focus {
       text-transform: uppercase;
       text-decoration: none;
       color: #ffffff;
       transition: color .4s ease; }
       @media (min-width: 25rem) {
-        /* line 38, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+        /* line 39, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
         header li a, header li a:active, header li a:focus {
           letter-spacing: 1px; } }
-      /* line 46, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+      /* line 47, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
       header li a:hover, header li a:active:hover, header li a:focus:hover {
         color: #41BBB3;
         text-decoration: none; }
-    /* line 52, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+    /* line 53, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
     header li .btn-underline {
       position: relative;
       display: inline-block;
@@ -1721,13 +1722,13 @@ header {
         transform: translate3d(-105%, 0, 0);
         transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
       @media (min-width: 25rem) {
-        /* line 52, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+        /* line 53, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
         header li .btn-underline {
           letter-spacing: 1px;
           padding: 0 .5rem;
           font-size: 1.25rem; } }
       @media (min-width: 48rem) {
-        /* line 52, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
+        /* line 53, C:/Users/Hannah/Desktop/portfolio/css/sass/layout/_header.scss */
         header li .btn-underline {
           padding: 0 1rem; } }
 
@@ -1943,15 +1944,15 @@ footer {
 
 /* END Keyframes for the initial animation */
 @media screen and (min-width: 910px) {
-  /* line 19, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+  /* line 6, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
   .skill-graphics {
     display: flex; } }
 
-/* line 24, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+/* line 11, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
 .bargraph-wrap {
   margin: 0 auto; }
 
-/* line 29, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+/* line 16, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
 .bar {
   background: #999999;
   width: 0;
@@ -1961,10 +1962,10 @@ footer {
   transition: width 2s, background .2s;
   -webkit-transform: translate3d(0, 0, 0);
   clear: both; }
-  /* line 38, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+  /* line 25, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
   .bar:nth-of-type(2n) {
     background: #b3b3b3; }
-  /* line 41, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+  /* line 28, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
   .bar .label {
     font-size: .75em;
     padding: 1em;
@@ -1974,11 +1975,11 @@ footer {
     position: relative;
     z-index: 2;
     font-weight: bold; }
-    /* line 50, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+    /* line 37, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
     .bar .label.light {
       background: #446e85; }
 
-/* line 56, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
+/* line 43, C:/Users/Hannah/Desktop/portfolio/css/sass/components/_bargraph.scss */
 .count {
   position: absolute;
   right: .25em;
@@ -2023,13 +2024,13 @@ footer {
     color: #41BBB3;
     font-size: 2rem;
     margin: 0.5rem 0;
+    font-family: "Lucida Console", monospace;
     /* The typing effect */
     /* The typewriter cursor effect */ }
     @media (min-width: 48rem) {
       /* line 43, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
       .hero .typewriter h1 {
         font-size: 40px;
-        font-family: monospace;
         overflow: hidden;
         /* Ensures the content is not revealed until the animation */
         border-right: 0.15em solid #41BBB3;
@@ -2228,33 +2229,43 @@ footer {
   width: 200px;
   border: 5px solid #0e5b81;
   display: block;
-  margin: 1rem;
+  margin: 1rem auto;
   text-align: center;
-  border: 2px solid #0e5b81;
-  shape-outside: circle(); }
+  border: 2px solid #0e5b81; }
+  @media (min-width: 48rem) {
+    /* line 183, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    .about img {
+      shape-outside: circle();
+      margin: 1rem; } }
+
+/* line 198, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+img.girl {
+  -webkit-box-shadow: 3px 3px 15px 0px #446e85;
+  -moz-box-shadow: 3px 3px 15px 0px #446e85;
+  box-shadow: 3px 3px 15px 0px #446e85; }
+
+/* line 203, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+img.cat {
+  -webkit-box-shadow: -3px -3px 15px 0px #446e85;
+  -moz-box-shadow: -3px -3px 15px 0px #446e85;
+  box-shadow: -3px -3px 15px 0px #446e85; }
 
 @media (min-width: 48rem) {
-  /* line 197, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 210, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   img.girl {
-    float: right;
-    -webkit-box-shadow: 3px 3px 15px 0px #446e85;
-    -moz-box-shadow: 3px 3px 15px 0px #446e85;
-    box-shadow: 3px 3px 15px 0px #446e85; }
-  /* line 204, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    float: right; }
+  /* line 213, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   img.cat {
-    float: left;
-    -webkit-box-shadow: -3px -3px 15px 0px #446e85;
-    -moz-box-shadow: -3px -3px 15px 0px #446e85;
-    box-shadow: -3px -3px 15px 0px #446e85; } }
+    float: left; } }
 
-/* line 215, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 221, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .skills {
   box-shadow: 0px -7px 7px 0px rgba(0, 0, 0, 0.2);
   padding-bottom: 3rem; }
-  /* line 218, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 224, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .skills h2 {
     padding-top: 3rem; }
-  /* line 221, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 227, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .skills .skill-list {
     color: #041a25;
     padding-bottom: 0.5rem;
@@ -2262,19 +2273,28 @@ footer {
     margin-left: 20px;
     text-indent: -20px; }
 
-/* line 229, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 236, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+.bargraph-wrap {
+  margin-bottom: 3rem;
+  margin-top: 1rem; }
+
+/* line 241, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+.skill-support {
+  margin-top: 1rem; }
+
+/* line 244, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .skill-support img {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   width: 200px; }
 
-/* line 238, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 253, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .gmnoprint, .gm-style-cc {
   display: none; }
 
-/* line 244, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 259, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .contact {
-  background: url(../../img/stary.jpg);
+  background: url(../../img/stary.JPG);
   /* Set a specific height */
   height: 750px;
   /* Create the parallax scrolling effect */
@@ -2284,59 +2304,59 @@ footer {
   background-size: cover;
   padding-bottom: 5rem; }
   @media (min-width: 62rem) {
-    /* line 244, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    /* line 259, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
     .contact {
       height: 550px; } }
-  /* line 258, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 273, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .contact .row {
     margin: 2rem 1rem 1rem 1rem; }
     @media (min-width: 48rem) {
-      /* line 258, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+      /* line 273, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
       .contact .row {
         width: 80%;
         margin: 2rem auto 0;
         max-width: 1100px; } }
-    /* line 267, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    /* line 282, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
     .contact .row > div {
       margin: 0 auto;
       padding: 2rem 0; }
-  /* line 272, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 287, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .contact h2 {
     color: white;
     margin-top: 0;
     padding-top: 3rem; }
-  /* line 277, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 292, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .contact ul {
     list-style: none;
     text-align: center; }
-    /* line 280, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    /* line 295, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
     .contact ul li {
       display: inline;
       padding-right: 2rem; }
-      /* line 283, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+      /* line 298, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
       .contact ul li a i {
         font-size: 2rem; }
-  /* line 288, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 303, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .contact a {
     color: #41BBB3 !important;
     transition: color .6s ease-in-out; }
-    /* line 291, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+    /* line 306, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
     .contact a:hover {
       opacity: .5; }
-  /* line 297, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 312, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .contact .email {
     font-size: 1.35rem;
     padding-bottom: 0.5rem;
     padding-top: 1.5rem; }
-  /* line 301, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 316, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .contact .email, .contact ul {
     display: block;
     text-align: center;
     margin: 0 auto; }
-  /* line 306, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 321, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .contact p {
     color: white !important; }
-  /* line 309, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 324, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .contact .users {
     padding-bottom: 0.35rem;
     font-size: 1.1rem;
@@ -2344,7 +2364,7 @@ footer {
     color: #ededed !important;
     margin-left: 20px;
     text-indent: -20px; }
-  /* line 320, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  /* line 335, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
   .contact .me {
     border-radius: 50%;
     max-width: 200px;
@@ -2356,17 +2376,17 @@ footer {
     -moz-box-shadow: -3px -3px 15px 0px #41bbb3;
     box-shadow: -3px -3px 15px 0px #41bbb3; }
     @media (min-width: 62rem) {
-      /* line 320, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+      /* line 335, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
       .contact .me {
         max-width: 250px; } }
 
-/* line 338, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 353, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 #map {
   width: 100%;
   height: 400px;
   background-color: grey; }
 
-/* line 434, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 361, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .animatable {
   /* initially hide animatable objects */
   visibility: hidden;
@@ -2378,7 +2398,7 @@ footer {
   animation-play-state: paused; }
 
 /* show objects being animated */
-/* line 447, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 374, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .animated {
   visibility: visible;
   -webkit-animation-fill-mode: both;
@@ -2494,29 +2514,29 @@ footer {
     opacity: 1;
     transform: translateX(0); } }
 
-/* line 629, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 556, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .animated.animationDelay {
   animation-delay: .4s;
   -webkit-animation-delay: .4s; }
 
-/* line 633, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 560, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .animated.animationDelayMed {
   animation-delay: 1.2s;
   -webkit-animation-delay: 1.2s; }
 
-/* line 637, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 564, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .animated.animationDelayLong {
   animation-delay: 1.6s;
   -webkit-animation-delay: 1.6s; }
 
-/* line 641, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 568, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .animated.bounceInRight {
   -webkit-animation-name: bounceInRight;
   -moz-animation-name: bounceInRight;
   -o-animation-name: bounceInRight;
   animation-name: bounceInRight; }
 
-/* line 647, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+/* line 574, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
 .animated.bounceInLeft {
   -webkit-animation-name: bounceInLeft;
   -moz-animation-name: bounceInLeft;
