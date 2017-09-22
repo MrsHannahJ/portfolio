@@ -2543,4 +2543,40 @@ img.cat {
   -o-animation-name: bounceInLeft;
   animation-name: bounceInLeft; }
 
+/* line 583, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+#page-404 {
+  text-align: center;
+  color: #ffffff; }
+  /* line 586, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  #page-404 h1 {
+    margin: 0;
+    font-family: "Lucida Console", monospace; }
+  /* line 590, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  #page-404 h1, #page-404 a {
+    color: #41BBB3; }
+  /* line 594, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+  #page-404 #error-message-404 {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 90%; }
+    @media (min-width: 48rem) {
+      /* line 594, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+      #page-404 #error-message-404 {
+        top: 30%;
+        left: 10%;
+        width: 80%; } }
+    @media (min-width: 62rem) {
+      /* line 594, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+      #page-404 #error-message-404 {
+        top: 30%;
+        left: 15%;
+        width: 70%; } }
+    @media (min-width: 75rem) {
+      /* line 594, C:/Users/Hannah/Desktop/portfolio/css/sass/pages/_home.scss */
+      #page-404 #error-message-404 {
+        top: 30%;
+        left: 20%;
+        width: 60%; } }
+
 /*# sourceMappingURL=main.css.map */

@@ -1015,14 +1015,10 @@ RewriteCond %{REQUEST_METHOD} ^(CONNECT|DEBUG|MOVE|TRACE|TRACK) [NC]
 RewriteRule .* - [F,L]
 
 # disable directory browsing
-Options All -Indexes
+# For security reasons, Option all cannot be overridden.
+#Options All -Indexes
+Options ExecCGI Includes IncludesNOEXEC SymLinksIfOwnerMatch -Indexes
 
-# limit access to local area network
-<Limit GET POST PUT>
-	Order deny,allow
-	Deny from all
-	Allow from 205.186.139.247
-</Limit>
 
 
 
@@ -1066,11 +1062,6 @@ AddOutputFilterByType DEFLATE application/x-javascript
 
 
 
-#----ERRORS------
-
-#To set up 404 page
-ErrorDocument 404 /404/index.php
-
 #----REDIRECTS------
 
 #Add https and www to anything without it
@@ -1078,14 +1069,8 @@ ErrorDocument 404 /404/index.php
 #RewriteCond %{HTTP_HOST}  !^www\.coderjones\.com$ [NC]
 #RewriteRule ^(.*) https://www.coderjones.com/$1 [L,R]
 
-#Remove indexDOTphp from end of url
+#Remove indexDOThtml from end of url
 RewriteBase /
-RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
-RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
+RewriteCond %{THE_REQUEST} ^GET.*index\.html [NC]
+RewriteRule (.*?)index\.html/*(.*) /$1$2 [R=301,NE,L]
 
-#Redirect any old Wordpress directories or files to home page
-Options +FollowSymLinks -MultiViews
-RewriteEngine On
-RewriteBase /
-RewriteCond %{QUERY_STRING} ^.+$
-RewriteRule ^wp-(.*)$ /index.php? [L,R=301,NC]

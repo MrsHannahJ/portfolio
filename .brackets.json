@@ -3,11 +3,11 @@
         "outputs": [
             {
                 "inputs": [
-                  "js/vendor/jquery-1.12.0.min.js",
-                  "js/plugins.js",
-                  "js/vendor/particles.js-master/particles.min.js",
-                  "js/vendor/zenscroll-latest/zenscroll-min.js",
-                  "js/main.js"
+                    "js/vendor/jquery-1.12.0.min.js",
+                    "js/vendor/particles.js-master/particles.min.js",
+                    "js/plugins.js",
+                    "js/vendor/zenscroll-latest/zenscroll-min.js",
+                    "js/main.js"
                 ],
                 "output": "js/main.min.js",
                 "generateMap": true,
@@ -15,5 +15,15 @@
                 "isolate": false
             }
         ]
-    }
+    },
+    "brackets-minifier.on-save-project": true,
+    "brackets-minifier.js-project-minify": false,
+    "brackets-minifier.css-project-minify": true,
+    "brackets-minifier.js-custom-path": "",
+    "brackets-minifier.css-custom-path": "",
+    "brackets-minifier.project-exclude": "",
+    "brackets-minifier.concat-js-filename": "",
+    "brackets-minifier.concat-css-filename": "",
+    "brackets-minifier.js-mangle": true,
+    "brackets-minifier.js-compress": true
 }

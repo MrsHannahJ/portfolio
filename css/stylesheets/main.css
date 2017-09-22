@@ -2725,3 +2725,42 @@ img.cat {
   -o-animation-name: bounceInLeft;
   animation-name: bounceInLeft;
 }
+
+#page-404 {
+  text-align: center;
+  color: #ffffff;
+}
+#page-404 h1 {
+  margin: 0;
+  font-family: "Lucida Console", monospace;
+}
+#page-404 h1, #page-404 a {
+  color: #41BBB3;
+}
+#page-404 #error-message-404 {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 90%;
+}
+@media (min-width: 48rem) {
+  #page-404 #error-message-404 {
+    top: 30%;
+    left: 10%;
+    width: 80%;
+  }
+}
+@media (min-width: 62rem) {
+  #page-404 #error-message-404 {
+    top: 30%;
+    left: 15%;
+    width: 70%;
+  }
+}
+@media (min-width: 75rem) {
+  #page-404 #error-message-404 {
+    top: 30%;
+    left: 20%;
+    width: 60%;
+  }
+}
