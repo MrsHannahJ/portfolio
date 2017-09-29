@@ -1001,7 +1001,7 @@ ServerSignature Off
 # prevent viewing of a specific file
 <files robots.txt>
 	Order allow,deny
-	Deny from all
+	Allow from all
 </files>
 
 # prevent viewing of specific file types
@@ -1065,9 +1065,9 @@ AddOutputFilterByType DEFLATE application/x-javascript
 #----REDIRECTS------
 
 #Add https and www to anything without it
-#RewriteEngine On
-#RewriteCond %{HTTP_HOST}  !^www\.coderjones\.com$ [NC]
-#RewriteRule ^(.*) https://www.coderjones.com/$1 [L,R]
+RewriteEngine On
+RewriteCond %{HTTP_HOST}  !^www\.coderjones\.com$ [NC]
+RewriteRule ^(.*) https://www.coderjones.com/$1 [L,R]
 
 #Remove indexDOThtml from end of url
 RewriteBase /

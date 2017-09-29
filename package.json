@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "autorem": "^0.1.1",
+    "cssnano": "^3.10.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.9.0",
+    "imagemin-gifsicle": "^5.2.0",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "pixrem": "^4.0.1",
+    "postcss-assets": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrsHannahJ/portfolio"
+  },
+  "author": "Hannah Jones",
+  "homepage": "http://www.coderjones.com"
+}
