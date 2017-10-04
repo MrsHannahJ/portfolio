@@ -15,9 +15,7 @@
   <link rel="shortcut icon" href="favicon.ico" />
   <meta name="robots" content="index, follow" />
 
-  <!--dev-->
-  <!--  <link rel="stylesheet" href="css/stylesheets/main.min.css" type="text/css" media="all" />-->
-  <!--production-->
+
   <link rel="stylesheet" href="css/main.min.css" type="text/css" media="all" />
 
 
@@ -40,7 +38,7 @@
 
   <!--HEADER-->
   <header class="clearfix">
-    <div class="container middle-xs">
+    <div class="wrapper container middle-xs">
       <a href="index.html" class="logo col-md-2">
         <img src="img/logo.png" alt="link to hannah jones homepage">
       </a>
@@ -92,7 +90,7 @@
     </div>
   </section>
   <section class="work">
-    <div class="container clearfix">
+    <div class="wrapper container clearfix">
       <h2 id="work">Work</h2>
       <div class="project row reverse">
         <div class="project-description col-md-8">
@@ -201,7 +199,7 @@
     </div>
   </section>
   <section class="about">
-    <div class="container clearfix">
+    <div class="wrapper container clearfix">
       <h2 id="about">About Me</h2>
       <img src="img/girl3.jpg" alt="cartoon femal coder" class="girl animatable bounceInRight">
       <p>I am a self-taught front-end web developer, particularly interested in working with small businesses and non-profits. As a small business owner and community volunteer, I have a passion to help grow others working within these communities.</p>
@@ -212,7 +210,7 @@
     </div>
   </section>
   <section class="skills">
-    <div class="container clearfix">
+    <div class="wrapper container clearfix">
       <h2 id="skills">Skills</h2>
       <!--Circle Charts-->
       <div class="chart-wrap">
@@ -264,9 +262,10 @@
             <div class="bar cf" data-percent="75%"><span class="label light">jQuery</span></div>
             <div class="bar cf" data-percent="75%"><span class="label">MySQL</span>
             </div>
-            <div class="bar cf" data-percent="60%"><span class="label light">Photoshop</span></div>
-            <div class="bar cf" data-percent="50%"><span class="label">Bootstrap</span></div>
-            <div class="bar cf" data-percent="50%"><span class="label light">MailChimp</span></div>
+            <div class="bar cf" data-percent="60%"><span class="label light">Grunt</span></div>
+            <div class="bar cf" data-percent="60%"><span class="label">Photoshop</span></div>
+            <div class="bar cf" data-percent="50%"><span class="label light">Bootstrap</span></div>
+            <div class="bar cf" data-percent="50%"><span class="label">MailChimp</span></div>
           </div>
         </div>
         <div class="skill-support">
@@ -290,7 +289,7 @@
   <div id="map"></div>
   <section class="contact">
     <h2 id="contact">Contact Me</h2>
-    <div class="row clearfix around-sm middle-sm">
+    <div class="wrapper container row clearfix around-sm middle-sm">
       <div class="col-sm-6">
         <p class="users"><span class="check">&check;</span> Got a project?</p>
         <p class="users"><span class="check">&check;</span> Need help with your website?</p>
@@ -303,8 +302,9 @@
         </ul>
       </div>
       <div class="col-sm-4">
-        <img src="img/hannah.jpg" alt="Hannah Jones" class="me">
-
+        <div>
+          <img src="img/me.jpg" alt="Hannah Jones" class="me">
+        </div>
       </div>
 
     </div>
