@@ -167,7 +167,30 @@
       font-size: 0.9rem;
     }
   }
+  .more-work{
+    text-align: center;
+    padding-top: 3em;
+    h2{
+      font-size: 1em;
+    }
+    a{
+      padding: 0.3em 1em;
+      text-decoration: none;
+      &:hover{
+        border: 1px solid $brand-color;
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+      }
+    }
+    i{
+      color: $brand-color;
+    }
+//    i{
+//      transform: rotate(90);
+//    }
+  }
 }
+
+
 
 //About Section
 .about {
@@ -244,6 +267,24 @@ img.cat {
   display: block;
   margin: 0 auto 2rem;
   width: 200px;
+}
+
+//Recommendations Link Strip
+.recommend-link{
+  @include background-opacity($accent-color, 0.3);
+  box-shadow: inset 0px 7px 10px 0px rgba(0, 0, 0, 0.3);
+  h3 {
+    text-align: center;
+    padding: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    a{
+      text-decoration: underline;
+      &:hover{
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 //Google Map

@@ -1507,8 +1507,8 @@ h2 {
 
 @font-face {
   font-family: 'fontello';
-  src: url("../fonts/fontello/fontello.eot?29276317");
-  src: url("../fonts/fontello/fontello.eot?29276317#iefix") format("embedded-opentype"), url("../fonts/fontello/fontello.woff2?29276317") format("woff2"), url("../fonts/fontello/fontello.woff?29276317") format("woff"), url("../fonts/fontello/fontello.ttf?29276317") format("truetype"), url("../fonts/fontello/fontello.svg?29276317#fontello") format("svg");
+  src: url("/fonts/fontello/fontello.eot?6538396");
+  src: url("/fonts/fontello/fontello.eot?6538396#iefix") format("embedded-opentype"), url("/fonts/fontello/fontello.woff2?6538396") format("woff2"), url("/fonts/fontello/fontello.woff?6538396") format("woff"), url("/fonts/fontello/fontello.ttf?6538396") format("truetype"), url("/fonts/fontello/fontello.svg?6538396#fontello") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -1518,13 +1518,12 @@ h2 {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../../fonts/fontello/fontello.svg?29276317#fontello') format('svg');
+    src: url('../font/fontello.svg?6538396#fontello') format('svg');
   }
 }
 */
-/* line 28, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+/* line 23, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -1551,31 +1550,36 @@ h2 {
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
 
-/* line 57, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
-.icon-mail:before {
+/* line 58, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
+.icon-up-open:before {
   content: '\e800'; }
 
 /* '' */
-/* line 64, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
-.icon-up-open:before {
-  content: '\e804'; }
+/* line 59, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
+.icon-right-open-big:before {
+  content: '\e801'; }
 
-/* '' */
-/* line 71, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
-.icon-github:before {
-  content: '\f055'; }
+/* '' */
+/* line 60, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
+.icon-mail:before {
+  content: '\e802'; }
 
-/* '' */
-/* line 78, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
+/* '' */
+/* line 61, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
 .icon-linkedin:before {
   content: '\f05c'; }
 
 /* '' */
-/* line 85, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
+/* line 62, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
 .icon-code:before {
   content: '\f121'; }
 
 /* '' */
+/* line 63, C:/Users/Hannah/Desktop/portfolio/src/css/sass/base/_fonts.scss */
+.icon-github:before {
+  content: '\f300'; }
+
+/* '' */
 /**
  * Basic typography style for copy text
  */
@@ -2385,19 +2389,37 @@ footer {
       text-align: center;
       color: #0e5b81;
       font-size: 0.9rem; }
+  /* line 170, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  .work .more-work {
+    text-align: center;
+    padding-top: 3em; }
+    /* line 173, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+    .work .more-work h2 {
+      font-size: 1em; }
+    /* line 176, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+    .work .more-work a {
+      padding: 0.3em 1em;
+      text-decoration: none; }
+      /* line 179, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+      .work .more-work a:hover {
+        border: 1px solid #041a25;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2); }
+    /* line 184, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+    .work .more-work i {
+      color: #041a25; }
 
-/* line 173, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 196, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .about {
   background: #41BBB3;
   /* The Fallback */
   background: rgba(65, 187, 179, 0.3);
   padding-bottom: 3rem;
   box-shadow: inset 0px 7px 10px 0px rgba(0, 0, 0, 0.3); }
-  /* line 177, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 200, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   .about h2 {
     padding-top: 3rem; }
 
-/* line 182, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 205, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .about img {
   border-radius: 50%;
   width: 200px;
@@ -2407,39 +2429,39 @@ footer {
   text-align: center;
   border: 2px solid #0e5b81; }
   @media (min-width: 48em) {
-    /* line 182, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+    /* line 205, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
     .about img {
       shape-outside: circle();
       margin: 1rem; } }
 
-/* line 197, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 220, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 img.girl {
   -webkit-box-shadow: 3px 3px 15px 0px #446e85;
   -moz-box-shadow: 3px 3px 15px 0px #446e85;
   box-shadow: 3px 3px 15px 0px #446e85; }
 
-/* line 203, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 226, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 img.cat {
   -webkit-box-shadow: -3px -3px 15px 0px #446e85;
   -moz-box-shadow: -3px -3px 15px 0px #446e85;
   box-shadow: -3px -3px 15px 0px #446e85; }
 
 @media (min-width: 48em) {
-  /* line 210, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 233, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   img.girl {
     float: right; }
-  /* line 213, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 236, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   img.cat {
     float: left; } }
 
-/* line 219, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 242, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .skills {
   box-shadow: 0px -7px 7px 0px rgba(0, 0, 0, 0.2);
   padding-bottom: 3rem; }
-  /* line 222, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 245, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   .skills h2 {
     padding-top: 3rem; }
-  /* line 225, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 248, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   .skills .skill-list {
     color: #041a25;
     padding-bottom: 0.5rem;
@@ -2447,27 +2469,46 @@ img.cat {
     margin-left: 20px;
     text-indent: -20px; }
 
-/* line 234, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 257, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .bargraph-wrap {
   margin-bottom: 3rem;
   margin-top: 1rem; }
 
-/* line 239, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 262, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .skill-support {
   margin-top: 1rem; }
 
-/* line 243, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 266, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .skill-support img {
   display: block;
   margin: 0 auto 2rem;
   width: 200px; }
 
-/* line 250, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 273, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+.recommend-link {
+  background: #41BBB3;
+  /* The Fallback */
+  background: rgba(65, 187, 179, 0.3);
+  box-shadow: inset 0px 7px 10px 0px rgba(0, 0, 0, 0.3); }
+  /* line 276, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  .recommend-link h3 {
+    text-align: center;
+    padding: 1.5em;
+    margin: 0;
+    font-weight: 300; }
+    /* line 281, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+    .recommend-link h3 a {
+      text-decoration: underline; }
+      /* line 283, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+      .recommend-link h3 a:hover {
+        font-weight: bold; }
+
+/* line 291, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .gmnoprint,
 .gm-style-cc {
   display: none; }
 
-/* line 256, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 297, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .contact {
   background: url(../img/stary.jpg);
   /* Set a specific height */
@@ -2479,60 +2520,60 @@ img.cat {
   background-size: cover;
   padding-bottom: 5rem; }
   @media (min-width: 62em) {
-    /* line 256, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+    /* line 297, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
     .contact {
       height: 550px; } }
-  /* line 269, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 310, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   .contact .row {
     margin: 2rem 1rem 1rem 1rem; }
     @media (min-width: 48em) {
-      /* line 269, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+      /* line 310, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
       .contact .row {
         width: 80%;
         margin: 2rem auto 0;
         max-width: 1100px; } }
-    /* line 276, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+    /* line 317, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
     .contact .row > div {
       margin: 0 auto;
       padding: 2rem 0; }
-  /* line 281, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 322, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   .contact h2 {
     color: white;
     margin-top: 0;
     padding-top: 3rem; }
-  /* line 286, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 327, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   .contact ul {
     list-style: none;
     text-align: center; }
-    /* line 289, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+    /* line 330, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
     .contact ul li {
       display: inline;
       padding-right: 2rem; }
-      /* line 292, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+      /* line 333, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
       .contact ul li a i {
         font-size: 2rem; }
-  /* line 297, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 338, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   .contact a {
     color: #41BBB3 !important;
     transition: color .6s ease-in-out; }
-    /* line 300, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+    /* line 341, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
     .contact a:hover {
       opacity: .5; }
-  /* line 304, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 345, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   .contact .email {
     font-size: 1.35rem;
     padding-bottom: 0.5rem;
     padding-top: 1.5rem; }
-  /* line 309, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 350, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   .contact .email,
   .contact ul {
     display: block;
     text-align: center;
     margin: 0 auto; }
-  /* line 315, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 356, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   .contact p {
     color: white !important; }
-  /* line 318, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 359, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   .contact .users {
     padding-bottom: 0.35rem;
     font-size: 1.1rem;
@@ -2540,7 +2581,7 @@ img.cat {
     color: #ededed !important;
     margin-left: 20px;
     text-indent: -20px; }
-  /* line 327, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 368, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   .contact .me {
     border-radius: 50%;
     width: 200px;
@@ -2552,17 +2593,17 @@ img.cat {
     -moz-box-shadow: -3px -3px 15px 0px #41bbb3;
     box-shadow: -3px -3px 15px 0px #41bbb3; }
     @media (min-width: 62em) {
-      /* line 327, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+      /* line 368, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
       .contact .me {
         width: 250px; } }
 
-/* line 343, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 384, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 #map {
   width: 100%;
   height: 400px;
   background-color: grey; }
 
-/* line 349, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 390, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .animatable {
   /* initially hide animatable objects */
   visibility: hidden;
@@ -2574,7 +2615,7 @@ img.cat {
   animation-play-state: paused; }
 
 /* show objects being animated */
-/* line 363, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 404, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .animated {
   visibility: visible;
   -webkit-animation-fill-mode: both;
@@ -2690,70 +2731,215 @@ img.cat {
     opacity: 1;
     transform: translateX(0); } }
 
-/* line 519, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 560, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .animated.animationDelay {
   animation-delay: .4s;
   -webkit-animation-delay: .4s; }
 
-/* line 524, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 565, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .animated.animationDelayMed {
   animation-delay: 1.2s;
   -webkit-animation-delay: 1.2s; }
 
-/* line 529, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 570, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .animated.animationDelayLong {
   animation-delay: 1.6s;
   -webkit-animation-delay: 1.6s; }
 
-/* line 534, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 575, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .animated.bounceInRight {
   -webkit-animation-name: bounceInRight;
   -moz-animation-name: bounceInRight;
   -o-animation-name: bounceInRight;
   animation-name: bounceInRight; }
 
-/* line 541, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 582, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 .animated.bounceInLeft {
   -webkit-animation-name: bounceInLeft;
   -moz-animation-name: bounceInLeft;
   -o-animation-name: bounceInLeft;
   animation-name: bounceInLeft; }
 
-/* line 548, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+/* line 589, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
 #page-404 {
   text-align: center;
   color: #ffffff; }
-  /* line 551, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 592, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   #page-404 h1 {
     margin: 0;
     font-family: "Lucida Console", monospace; }
-  /* line 555, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 596, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   #page-404 h1,
   #page-404 a {
     color: #41BBB3; }
-  /* line 559, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+  /* line 600, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
   #page-404 #error-message-404 {
     position: absolute;
     top: 25%;
     left: 5%;
     width: 90%; }
     @media (min-width: 48em) {
-      /* line 559, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+      /* line 600, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
       #page-404 #error-message-404 {
         top: 30%;
         left: 10%;
         width: 80%; } }
     @media (min-width: 62em) {
-      /* line 559, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+      /* line 600, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
       #page-404 #error-message-404 {
         top: 30%;
         left: 15%;
         width: 70%; } }
     @media (min-width: 75em) {
-      /* line 559, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
+      /* line 600, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_home.scss */
       #page-404 #error-message-404 {
         top: 30%;
         left: 20%;
         width: 60%; } }
+
+/* line 2, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+#recommendations header {
+  background: #041a25; }
+
+/* line 5, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+#recommendations .logo img {
+  padding-bottom: 0.75em; }
+
+/* line 8, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+#recommendations .rec-hero {
+  background: #41BBB3;
+  /* The Fallback */
+  background: rgba(65, 187, 179, 0.3);
+  box-shadow: inset 0px 7px 10px 0px rgba(0, 0, 0, 0.3); }
+  /* line 11, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+  #recommendations .rec-hero .wrapper {
+    padding: 1.5em 0.5em 2em; }
+  /* line 14, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+  #recommendations .rec-hero h1 {
+    text-transform: capitalize; }
+
+/* line 19, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+#recommendations .list-of-recs {
+  margin: 2rem 0;
+  padding-bottom: 3rem; }
+  /* line 22, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+  #recommendations .list-of-recs a {
+    font-weight: bold;
+    color: #41BBB3; }
+  /* line 26, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+  #recommendations .list-of-recs h2 {
+    padding-bottom: 1rem; }
+  /* line 29, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+  #recommendations .list-of-recs .project-preview {
+    margin: 0 auto; }
+  /* line 32, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+  #recommendations .list-of-recs img {
+    border: 5px solid #ffffff;
+    width: 100%;
+    max-width: 550px; }
+    @media (min-width: 62em) {
+      /* line 32, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+      #recommendations .list-of-recs img {
+        width: 100%; } }
+  /* line 40, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+  #recommendations .list-of-recs .project-preview a {
+    display: block;
+    text-align: center;
+    width: 175px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em; }
+  /* line 49, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+  #recommendations .list-of-recs .btn-draw {
+    position: relative;
+    display: inline-block;
+    color: #0e5b81;
+    border-bottom: 2px solid #0e5b81;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out; }
+    /* line 131, C:/Users/Hannah/Desktop/portfolio/src/css/sass/abstracts/_mixins.scss */
+    #recommendations .list-of-recs .btn-draw:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 2px;
+      background: #0e5b81;
+      transform: translateY(100%);
+      transition: transform 0.1s ease-in-out;
+      transition-delay: 0.3s; }
+    /* line 144, C:/Users/Hannah/Desktop/portfolio/src/css/sass/abstracts/_mixins.scss */
+    #recommendations .list-of-recs .btn-draw > span {
+      position: relative;
+      display: block;
+      padding: 0.5em;
+      color: inherit; }
+      /* line 150, C:/Users/Hannah/Desktop/portfolio/src/css/sass/abstracts/_mixins.scss */
+      #recommendations .list-of-recs .btn-draw > span:before, #recommendations .list-of-recs .btn-draw > span:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #0e5b81;
+        transition: transform 0.1s ease-in-out; }
+      /* line 161, C:/Users/Hannah/Desktop/portfolio/src/css/sass/abstracts/_mixins.scss */
+      #recommendations .list-of-recs .btn-draw > span:before {
+        height: 2px;
+        width: 100%;
+        transform: translateX(100%);
+        transition-delay: 0.2s; }
+      /* line 168, C:/Users/Hannah/Desktop/portfolio/src/css/sass/abstracts/_mixins.scss */
+      #recommendations .list-of-recs .btn-draw > span:after {
+        height: 100%;
+        width: 2px;
+        transform: translateY(-100%);
+        transition-delay: 0.1s; }
+    /* line 176, C:/Users/Hannah/Desktop/portfolio/src/css/sass/abstracts/_mixins.scss */
+    #recommendations .list-of-recs .btn-draw:hover:after,
+    #recommendations .list-of-recs .btn-draw:hover > span:before,
+    #recommendations .list-of-recs .btn-draw:hover > span:after {
+      transform: translate(0, 0); }
+    /* line 182, C:/Users/Hannah/Desktop/portfolio/src/css/sass/abstracts/_mixins.scss */
+    #recommendations .list-of-recs .btn-draw:hover:after {
+      transition-delay: 0s; }
+    /* line 186, C:/Users/Hannah/Desktop/portfolio/src/css/sass/abstracts/_mixins.scss */
+    #recommendations .list-of-recs .btn-draw:hover > span:before {
+      transition-delay: 0.1s; }
+    /* line 190, C:/Users/Hannah/Desktop/portfolio/src/css/sass/abstracts/_mixins.scss */
+    #recommendations .list-of-recs .btn-draw:hover > span:after {
+      transition-delay: 0.2s; }
+    /* line 194, C:/Users/Hannah/Desktop/portfolio/src/css/sass/abstracts/_mixins.scss */
+    #recommendations .list-of-recs .btn-draw:hover {
+      color: #41BBB3;
+      background-color: #0e5b81;
+      transition-delay: 0.3s; }
+  /* line 52, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+  #recommendations .list-of-recs h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #0e5b81; }
+  /* line 57, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+  #recommendations .list-of-recs h4 {
+    margin-top: 0; }
+  /* line 60, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+  #recommendations .list-of-recs p, #recommendations .list-of-recs ul li {
+    font-size: 1rem; }
+
+/* line 65, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+#recommendations .rec-contact {
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 0; }
+
+/* line 72, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_recommendations.scss */
+.bold {
+  font-weight: bold; }
+
+/* line 1, C:/Users/Hannah/Desktop/portfolio/src/css/sass/pages/_work.scss */
+#work-page .work {
+  margin: 0; }
 
 /*# sourceMappingURL=main.css.map */

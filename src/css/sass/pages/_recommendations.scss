@@ -1,0 +1,74 @@
+#recommendations{
+  header{
+  background: $brand-color;
+  }
+  .logo img{
+    padding-bottom: 0.75em;
+  }
+  .rec-hero{
+    @include background-opacity($accent-color, 0.3);
+    box-shadow: inset 0px 7px 10px 0px rgba(0, 0, 0, 0.3);
+    .wrapper{
+      padding: 1.5em 0.5em 2em;
+    }
+    h1{
+      text-transform: capitalize;
+    }
+  }
+  
+  .list-of-recs{
+  margin: 2rem 0;
+  padding-bottom: 3rem;
+  a{
+    font-weight: bold;
+    color: $accent-color;
+  }
+  h2 {
+    padding-bottom: 1rem;
+  }
+  .project-preview {
+    margin: 0 auto;
+  }
+  img {
+    border: 5px solid $text-light-color;
+    width: 100%;
+    max-width: 550px;
+    @include respond-to(md) {
+      width: 100%;
+    }
+  }
+  .project-preview a {
+    display: block;
+    text-align: center;
+    width: 175px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+  }
+  .btn-draw {
+    @include btn-draw($brand-light-color, $accent-color, 2px);
+  }
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $brand-light-color;
+  }
+  h4 {
+    margin-top: 0;
+  }
+  p, ul li {
+    font-size: 1rem;
+  }
+}
+
+  .rec-contact{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 0;
+  }
+}
+
+.bold{
+  font-weight: bold;
+}
